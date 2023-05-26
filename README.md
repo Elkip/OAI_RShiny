@@ -5,4 +5,6 @@ The data in the project is a subset of the (Osteoarthritis Initiative)[https://n
     - 3) Death
     - 4+) A numbered random forest cluster of those who received knee replacements
 
-The app is an 
+Run the docker container with:
+> docker build -t oai_app . 
+> docker run -p 3838:3838 oai_app

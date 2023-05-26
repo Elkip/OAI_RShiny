@@ -4,8 +4,8 @@ library(DT)
 library(tidyverse)
 library(nnet)
 
-# Set Port
-options(shiny.port = 3838)
+# Set Port and IP
+options(shiny.port = 3838, shiny.host = "0.0.0.0")
 
 # Load Data
 DATAPATH <- "/data"

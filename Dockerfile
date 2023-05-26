@@ -9,6 +9,5 @@ COPY app /shiny
 COPY data /data
 
 EXPOSE 3838
-RUN sudo chown -R shiny:shiny /shiny
 
 CMD ["R", "-e", "shiny::runApp('/shiny')"]
