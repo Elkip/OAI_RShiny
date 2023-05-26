@@ -4,11 +4,14 @@ library(DT)
 library(tidyverse)
 library(nnet)
 
+# Set Port
+options(shiny.port = 3838)
+
 # Load Data
-DATAPATH <- Sys.getenv("OAI_DATA")
+DATAPATH <- "/data"
 if (DATAPATH == "" ) stop( "Please add datapath to OAI_DATA" )
 
-source("/home/elkip/Workspace/BU_Notes/Research/OAI_LoadData.R", chdir = T)
+source("R/OAI_LoadData.R", chdir = T)
 
 bsln <- getBaselineData(DATAPATH)
 evnts <- getEvents(DATAPATH)
